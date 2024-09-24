@@ -1,0 +1,16 @@
+<h3>Filters</h3>
+
+<label for="cocktail">Cocktail Name: </label><br>
+<input #cocktailName type="text" (input)="applyFilterCocktails(cocktailName.value)" id="cocktail" placeholder="Enter cocktail name">
+<br>
+
+<div class="container">
+     @for(cocktail of (filteredCocktails ? filteredCocktails(): service.allCocktails()) ; track cocktail.id ){
+        <div class="card">
+            <a [routerLink]="['/detail', cocktail.id]">
+                <img [src]= cocktail.imageUrl>
+                <h3>{{ cocktail.name }}<span (click)="service.itsFavorite(cocktail)" [class.active]= "isFavorite(cocktail)" class="icon-star" id="star-{cocktailId}"></span></h3>
+            </a><p id="ingredients">{{ cocktail.ingredients }}</p>
+        </div>
+     }
+</div>

@@ -1,0 +1,26 @@
+
+.star-icon {
+    position: relative;
+    left:350px;
+    top: 10px;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.border-radius{
+    border-radius: 20px;
+    border: 1px solid teal;
+}
+.filling-color{
+    background-color: teal;
+}
+.text-position{
+    text-align: center;
+    
+}
+.p-text-size{
+    display: inline-block;
+}
+
+// I want the p to be in text size and grows and shrink based on the text, also I want the text to centred
