@@ -35,7 +35,7 @@ export class ConfiguratorService {
   
   filterCocktails(cocktailName: string): Signal<Cocktail[]> {
     return computed(() => {
-      return this.allCocktails().filter(c => c.name.toLocaleLowerCase().includes(cocktailName));
+      return this.allCocktails().filter(c => c.name.includes(cocktailName));
     })
   }
   getCocktailbyId(id : string): Cocktail {
